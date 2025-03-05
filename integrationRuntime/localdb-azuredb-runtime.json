@@ -1,6 +1,0 @@
-{
-	"name": "localdb-azuredb-runtime",
-	"properties": {
-		"type": "SelfHosted"
-	}
-}
