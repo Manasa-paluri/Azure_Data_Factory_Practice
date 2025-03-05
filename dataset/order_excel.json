@@ -1,0 +1,17 @@
+{
+	"name": "order_excel",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage_excel",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation"
+			}
+		},
+		"schema": []
+	}
+}
