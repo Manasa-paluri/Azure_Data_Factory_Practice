@@ -57,10 +57,6 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"pipeline": {
-						"referenceName": "pl_country_blob_db",
-						"type": "PipelineReference"
-					},
 					"waitOnCompletion": true
 				}
 			}
