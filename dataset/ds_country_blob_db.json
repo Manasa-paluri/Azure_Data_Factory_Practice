@@ -1,0 +1,16 @@
+{
+	"name": "ds_country_blob_db",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sql_source",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "stage",
+			"table": "country"
+		}
+	}
+}
