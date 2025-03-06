@@ -1,0 +1,258 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "sample-adf-pipeline"
+		},
+		"AzureBlobStorage_excel_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage_excel'"
+		},
+		"GitHub1_credential": {
+			"type": "secureString",
+			"metadata": "Secure string for 'credential' of 'GitHub1'"
+		},
+		"ls_blob_sql_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_blob_sql'"
+		},
+		"ls_output_blob_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_output_blob'"
+		},
+		"ls_source_blob_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_source_blob'"
+		},
+		"ls_source_blob1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_source_blob1'"
+		},
+		"sql_destination_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'sql_destination'"
+		},
+		"sql_source_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'sql_source'"
+		},
+		"ls_api_sink_ds_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_api_sink_ds'"
+		},
+		"ls_data_extraction_api_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_data_extraction_api'"
+		},
+		"ls_https_api_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_https_api'"
+		},
+		"GitHub1_properties_typeProperties_username": {
+			"type": "string",
+			"defaultValue": "Manasa-paluri"
+		},
+		"ls_blob_sql_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sample-sql-server-adf.database.windows.net"
+		},
+		"ls_blob_sql_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "sample-adf"
+		},
+		"ls_blob_sql_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "manasa"
+		},
+		"ls_source_blob1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sample-sql-server-adf"
+		},
+		"ls_source_blob1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "master"
+		},
+		"ls_source_blob1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "manasa"
+		},
+		"sql_destination_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sample-sql-server-adf.database.windows.net"
+		},
+		"sql_destination_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "sample-adf"
+		},
+		"sql_destination_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "manasa"
+		},
+		"sql_source_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sample-sql-server-adf.database.windows.net"
+		},
+		"sql_source_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "sample-adf"
+		},
+		"sql_source_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "manasa"
+		},
+		"ls_api_sink_ds_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://jsonplaceholder.typicode.com/users"
+		},
+		"ls_api_sink_ds_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Manasa-paluri"
+		},
+		"ls_https_api_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://jsonplaceholder.typicode.com/users"
+		},
+		"ls_https_api_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Manasa-paluri"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "sample-adf-pipeline_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureBlobStorage_excel_connectionString": {
+						"value": "[parameters('AzureBlobStorage_excel_connectionString')]"
+					},
+					"GitHub1_credential": {
+						"value": "[parameters('GitHub1_credential')]"
+					},
+					"ls_blob_sql_password": {
+						"value": "[parameters('ls_blob_sql_password')]"
+					},
+					"ls_output_blob_connectionString": {
+						"value": "[parameters('ls_output_blob_connectionString')]"
+					},
+					"ls_source_blob_connectionString": {
+						"value": "[parameters('ls_source_blob_connectionString')]"
+					},
+					"ls_source_blob1_password": {
+						"value": "[parameters('ls_source_blob1_password')]"
+					},
+					"sql_destination_password": {
+						"value": "[parameters('sql_destination_password')]"
+					},
+					"sql_source_password": {
+						"value": "[parameters('sql_source_password')]"
+					},
+					"ls_api_sink_ds_password": {
+						"value": "[parameters('ls_api_sink_ds_password')]"
+					},
+					"ls_data_extraction_api_connectionString": {
+						"value": "[parameters('ls_data_extraction_api_connectionString')]"
+					},
+					"ls_https_api_password": {
+						"value": "[parameters('ls_https_api_password')]"
+					},
+					"GitHub1_properties_typeProperties_username": {
+						"value": "[parameters('GitHub1_properties_typeProperties_username')]"
+					},
+					"ls_blob_sql_properties_typeProperties_server": {
+						"value": "[parameters('ls_blob_sql_properties_typeProperties_server')]"
+					},
+					"ls_blob_sql_properties_typeProperties_database": {
+						"value": "[parameters('ls_blob_sql_properties_typeProperties_database')]"
+					},
+					"ls_blob_sql_properties_typeProperties_userName": {
+						"value": "[parameters('ls_blob_sql_properties_typeProperties_userName')]"
+					},
+					"ls_source_blob1_properties_typeProperties_server": {
+						"value": "[parameters('ls_source_blob1_properties_typeProperties_server')]"
+					},
+					"ls_source_blob1_properties_typeProperties_database": {
+						"value": "[parameters('ls_source_blob1_properties_typeProperties_database')]"
+					},
+					"ls_source_blob1_properties_typeProperties_userName": {
+						"value": "[parameters('ls_source_blob1_properties_typeProperties_userName')]"
+					},
+					"sql_destination_properties_typeProperties_server": {
+						"value": "[parameters('sql_destination_properties_typeProperties_server')]"
+					},
+					"sql_destination_properties_typeProperties_database": {
+						"value": "[parameters('sql_destination_properties_typeProperties_database')]"
+					},
+					"sql_destination_properties_typeProperties_userName": {
+						"value": "[parameters('sql_destination_properties_typeProperties_userName')]"
+					},
+					"sql_source_properties_typeProperties_server": {
+						"value": "[parameters('sql_source_properties_typeProperties_server')]"
+					},
+					"sql_source_properties_typeProperties_database": {
+						"value": "[parameters('sql_source_properties_typeProperties_database')]"
+					},
+					"sql_source_properties_typeProperties_userName": {
+						"value": "[parameters('sql_source_properties_typeProperties_userName')]"
+					},
+					"ls_api_sink_ds_properties_typeProperties_url": {
+						"value": "[parameters('ls_api_sink_ds_properties_typeProperties_url')]"
+					},
+					"ls_api_sink_ds_properties_typeProperties_userName": {
+						"value": "[parameters('ls_api_sink_ds_properties_typeProperties_userName')]"
+					},
+					"ls_https_api_properties_typeProperties_url": {
+						"value": "[parameters('ls_https_api_properties_typeProperties_url')]"
+					},
+					"ls_https_api_properties_typeProperties_userName": {
+						"value": "[parameters('ls_https_api_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "sample-adf-pipeline_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'sample-adf-pipeline_ArmTemplate_0')]"
+			]
+		}
+	]
+}

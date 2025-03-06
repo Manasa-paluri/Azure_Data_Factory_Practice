@@ -1,0 +1,93 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "sample-adf-pipeline"
+		},
+		"AzureBlobStorage_excel_connectionString": {
+			"value": ""
+		},
+		"GitHub1_credential": {
+			"value": ""
+		},
+		"ls_blob_sql_password": {
+			"value": ""
+		},
+		"ls_output_blob_connectionString": {
+			"value": ""
+		},
+		"ls_source_blob_connectionString": {
+			"value": ""
+		},
+		"ls_source_blob1_password": {
+			"value": ""
+		},
+		"sql_destination_password": {
+			"value": ""
+		},
+		"sql_source_password": {
+			"value": ""
+		},
+		"ls_api_sink_ds_password": {
+			"value": ""
+		},
+		"ls_data_extraction_api_connectionString": {
+			"value": ""
+		},
+		"ls_https_api_password": {
+			"value": ""
+		},
+		"GitHub1_properties_typeProperties_username": {
+			"value": "Manasa-paluri"
+		},
+		"ls_blob_sql_properties_typeProperties_server": {
+			"value": "sample-sql-server-adf.database.windows.net"
+		},
+		"ls_blob_sql_properties_typeProperties_database": {
+			"value": "sample-adf"
+		},
+		"ls_blob_sql_properties_typeProperties_userName": {
+			"value": "manasa"
+		},
+		"ls_source_blob1_properties_typeProperties_server": {
+			"value": "sample-sql-server-adf"
+		},
+		"ls_source_blob1_properties_typeProperties_database": {
+			"value": "master"
+		},
+		"ls_source_blob1_properties_typeProperties_userName": {
+			"value": "manasa"
+		},
+		"sql_destination_properties_typeProperties_server": {
+			"value": "sample-sql-server-adf.database.windows.net"
+		},
+		"sql_destination_properties_typeProperties_database": {
+			"value": "sample-adf"
+		},
+		"sql_destination_properties_typeProperties_userName": {
+			"value": "manasa"
+		},
+		"sql_source_properties_typeProperties_server": {
+			"value": "sample-sql-server-adf.database.windows.net"
+		},
+		"sql_source_properties_typeProperties_database": {
+			"value": "sample-adf"
+		},
+		"sql_source_properties_typeProperties_userName": {
+			"value": "manasa"
+		},
+		"ls_api_sink_ds_properties_typeProperties_url": {
+			"value": "https://jsonplaceholder.typicode.com/users"
+		},
+		"ls_api_sink_ds_properties_typeProperties_userName": {
+			"value": "Manasa-paluri"
+		},
+		"ls_https_api_properties_typeProperties_url": {
+			"value": "https://jsonplaceholder.typicode.com/users"
+		},
+		"ls_https_api_properties_typeProperties_userName": {
+			"value": "Manasa-paluri"
+		}
+	}
+}
