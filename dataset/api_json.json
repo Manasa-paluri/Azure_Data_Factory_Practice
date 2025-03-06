@@ -1,0 +1,17 @@
+{
+	"name": "api_json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_https_api",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation"
+			}
+		},
+		"schema": {}
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"name": "api_sql",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sql_destination",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "stage",
+			"table": "users"
+		}
+	}
+}
