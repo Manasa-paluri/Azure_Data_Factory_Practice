@@ -1,5 +1,5 @@
 {
-	"name": "pl_ingestion_transactions",
+	"name": "pl_ingestion",
 	"properties": {
 		"activities": [
 			{
@@ -57,11 +57,6 @@
 				]
 			}
 		],
-		"variables": {
-			"item": {
-				"type": "String"
-			}
-		},
 		"annotations": []
 	}
 }
