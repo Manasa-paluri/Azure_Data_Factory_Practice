@@ -5,13 +5,13 @@
 		"annotations": [],
 		"type": "SqlServer",
 		"typeProperties": {
-			"server": "tcp:sample-sql-server-adf.database.windows.net,1433",
-			"database": "db_de_mini_proj",
+			"server": "JM-DKT-030",
+			"database": "dbo_de_mp_raw",
 			"encrypt": "True",
-			"trustServerCertificate": false,
-			"authenticationType": "SQL",
-			"userName": "Manasa-paluri",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI0ZmVhODJlNC02ZDFhLTQ5NWEtODYzYy03Mzk1ZGQ5Nzk2YzgiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"trustServerCertificate": true,
+			"authenticationType": "Windows",
+			"userName": "AzureAD\\PaluriManasa",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIzY2IxZWIyNy0zMjM0LTRmODAtOGRjNS1iYzI1YTc1MDQ0YWEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "self-hosted-ir-ssms-adf",
