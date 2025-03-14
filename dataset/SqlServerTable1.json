@@ -84,7 +84,10 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "ds_Hotel_booking_customers"
+			"table": {
+				"value": "@item()",
+				"type": "Expression"
+			}
 		}
 	}
 }

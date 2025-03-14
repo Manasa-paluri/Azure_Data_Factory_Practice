@@ -1,0 +1,19 @@
+{
+	"name": "ds_snowflake",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_snowflake_stg",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeV2Table",
+		"schema": [],
+		"typeProperties": {
+			"schema": "raw",
+			"table": {
+				"value": "@item()",
+				"type": "Expression"
+			}
+		}
+	}
+}
