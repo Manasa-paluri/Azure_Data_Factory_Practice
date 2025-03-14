@@ -84,7 +84,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "ds_Hotel_booking_customers"
+			"table": "ds_Hotel_booking_transaction"
 		}
 	}
 }

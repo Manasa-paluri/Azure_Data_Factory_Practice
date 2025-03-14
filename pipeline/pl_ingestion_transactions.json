@@ -38,7 +38,7 @@
 					"enableStaging": true,
 					"stagingSettings": {
 						"linkedServiceName": {
-							"referenceName": "ls_staging_customers",
+							"referenceName": "linkedService2",
 							"type": "LinkedServiceReference"
 						}
 					}
