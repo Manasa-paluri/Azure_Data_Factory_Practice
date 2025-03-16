@@ -12,5 +12,6 @@
 			"schema": "stage",
 			"table": "users"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

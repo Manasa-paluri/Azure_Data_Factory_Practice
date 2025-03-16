@@ -12,5 +12,6 @@
 			"schema": "prep",
 			"table": "users"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }
